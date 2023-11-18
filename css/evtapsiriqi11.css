@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 100vh;
+    background: black;
+}
+.loader {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    animation: animate 1.2s linear infinite;
+    border-radius: 10px;
+}
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: black;
+    border: 5px solid ;
+    border-radius: 10px;
+}
+.loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient( #10609e, #a114cc);
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
